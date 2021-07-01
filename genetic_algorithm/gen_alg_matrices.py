@@ -42,7 +42,6 @@ def main():
     header_training, data_training, target_training = extract_from_csv(training_set_path)
     header_test, data_test, target_test = extract_from_csv(test_set_path)
 
-    print(target_training)
     # Get dimensions of a network and run genetic algorithm
     dimensions = get_dimensions(nn_architecture, header_training)
     population = genetic_algorithm(population_size, elitism, mutation_prob, mutation_dev, data_training,
